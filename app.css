@@ -1,0 +1,117 @@
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("https://media1.giphy.com/media/13ZzYXkeIjcZy0/giphy.gif?cid=6c09b9528tiumszntksxxlm7vrkowilmjm3d1xbq646cmg9s&ep=v1_gifs_search&rid=giphy.gif&ct=g") no-repeat center/ cover;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+
+body::before{
+    content: '';
+    width: 102vw;
+    position: absolute;
+    top: -100px;
+    left: -20px;
+    bottom: 0;
+    right: 0;
+    filter: blur(5px);
+    background: inherit;
+}
+
+
+
+.calendar{
+    position: relative;
+    width: 300px;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.503);
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(1.20);
+}
+
+
+
+.calendar-picture{
+    position: relative;
+    height: 200px;
+    padding: 20px;
+    color: white;
+    background: #262626 url("https://cutewallpaper.org/27/cherry-tree-anime-wallpaper/1514925409.jpg");
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.449);
+    box-sizing: border-box;
+}
+
+.calendar-picture::before{
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.256, rgba(0, 0, 0, 0.1)));
+}
+
+.calendar-picture h2{
+    margin: 0;
+    text-align: center;
+
+}
+
+
+.calendar-picture h3{
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+.calendar__date{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+    grid-gap: 10px;
+    box-sizing: border-box;
+}
+
+
+.calendar__day{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    font-weight: 600;
+    color: #262626;
+}
+
+
+.calendar__day:nth-child(7){
+    color: #080808;
+}
+
+
+.calendar__number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    color: #262626;
+}
+
+
+.calendar__number:nth-child(7){
+    color: #ff5df2;
+    font-weight: 700;
+}
+
+.calendar__number--current, 
+.calendar__number:hover{
+    background-color: rgb(205, 90, 192);
+    color: #fff !important;
+    font-weight: 700;
+    cursor: pointer;
+}
